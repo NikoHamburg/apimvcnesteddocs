@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import * as NestedUsersController from "../controllers/nestedUserController.js";
+import * as NestedUsersController from "../controllers/nestedUsersController.js";
 
 const nestedUsersRouter = express.Router();
 mongoose.connect("mongodb://192.168.0.211:27017/test");
