@@ -1,6 +1,6 @@
 import express from "express";
-import { simpleUsersRouter } from "./routes/simpleUserRouter.js";
-import { nestedUsersRouter } from "./routes/nestedUserRouter.js";
+import { simpleUsersRouter } from "./routes/simpleUsersRouter.js";
+import { nestedUsersRouter } from "./routes/nestedUsersRouter.js";
 
 const app = express();
 const port = 3033;
