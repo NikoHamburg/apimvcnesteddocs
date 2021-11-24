@@ -1,0 +1,40 @@
+Arguments: 
+  /home/niko/.nvm/versions/node/v16.6.1/bin/node /usr/bin/yarn add -D nodemon
+
+PATH: 
+  /home/niko/.nvm/versions/node/v16.6.1/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.6.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/niko/javascript/apimvcnesteddocs/package.json: Unexpected string in JSON at position 116
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "apimvcnesteddocs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "type":"module"
+    "scripts": {
+      "backend": "nodemon server.js"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
