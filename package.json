@@ -5,9 +5,12 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "backend": "nodemon server.js"
+    "backend": "nodemon server.js",
+    "start": "nodemon server.js"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "mongoose": "^6.0.13",
     "nodemon": "^2.0.15"
   }
 }
