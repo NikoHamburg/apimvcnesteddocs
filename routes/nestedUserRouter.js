@@ -26,8 +26,10 @@ nestedUsersRouter.get("/accounthistory/:id", async (req, res) => {
 
 nestedUsersRouter.post("/createnesteduser", async (req, res) => {
   const nestedUserObj = req.body;
-  res.json({
-    createdUser: await NestedUsersController.createNestedUser(nestedUserObj),
+  await NestedUsersController.createNestedUser(nestedUserObj, (result) => {
+    res.json({
+      result,
+    });
   });
 });
 

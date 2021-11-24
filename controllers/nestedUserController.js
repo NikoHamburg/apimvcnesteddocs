@@ -12,8 +12,14 @@ export const getUserAccountHistory = async (id) => {
   return await NestedUsersModel.findById(id, { accountHistory: 1 });
 };
 
-export const createNestedUser = async (nestedUserObj) => {
-  return await NestedUsersModel.create(nestedUserObj);
+export const createNestedUser = async (nestedUserObj, callback) => {
+  await NestedUsersModel.create(nestedUserObj, (err, docs) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(docs);
+    }
+  });
 };
 
 export const deleteNestedUser = async (id) => {
