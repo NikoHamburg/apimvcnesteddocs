@@ -1,0 +1,27 @@
+import { NestedUsersModel } from "../models/nestedUsersModel.js";
+
+export const getAllNestedUsers = async () => {
+  return await NestedUsersModel.find({});
+};
+
+export const getAllNestedUsersEmails = async () => {
+  return await NestedUsersModel.find({}, { email: 1 });
+};
+
+export const getUserAccountHistory = async (id) => {
+  return await NestedUsersModel.findById(id, { accountHistory: 1 });
+};
+
+export const createNestedUser = async (nestedUserObj) => {
+  return await NestedUsersModel.create(nestedUserObj);
+};
+
+export const deleteNestedUser = async (id) => {
+  return await NestedUsersModel.findByIdAndRemove(id);
+};
+
+export const updateNestedUser = async (id, updateFields) => {
+  return await NestedUsersModel.findByIdAndUpdate(id, updateFields, {
+    new: true,
+  });
+};

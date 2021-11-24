@@ -1,0 +1,82 @@
+@urlsimpleusers = http://localhost:3033/simpleusers
+@urlnestedusers = http://localhost:3033/nestedusers
+
+### GET all simple users
+GET {{urlsimpleusers}}/simpleusers
+
+### POST create simple user
+POST {{urlsimpleusers}}/createuser
+Content-Type: application/json
+
+{
+    "firstName": "Testuser",
+    "lastName": "Testman"
+}
+
+### PATCH update simple user
+PATCH {{urlsimpleusers}}/updateuser/619e38c2f05b000671390be2
+Content-Type: application/json
+
+{
+    "firstName": "Heino",
+    "lastName": "Heinomann"
+}
+
+### DELETE delete simple user
+DELETE {{urlsimpleusers}}/deleteuser/619e38c2f05b000671390be2
+
+### GET all nested user
+GET {{urlnestedusers}}/nestedusers
+
+### GET all nested user emails
+GET {{urlnestedusers}}/emails
+
+### GET nested user account history
+GET {{urlnestedusers}}/accounthistory/619e39b3692ce10a4922c8dd
+
+### POST add nested user
+POST {{urlnestedusers}}/createnesteduser
+Content-Type: application/json
+
+{
+    "name" : "Stephanie Added",
+    "username" : "Brandyn_Reilly59",
+    "email" : "Tyshawn.Abshire@yahoo.com",
+    "address" : {
+        "street" : "Hill Parks",
+        "suite" : "Suite 582",
+        "city" : "Garfieldmouth",
+        "zipcode" : "21401-7727"
+    },
+    "phone" : "502-899-9440 x015",
+    "website" : "jessyca.org",
+    "company" : "Kshlerin, Wiza and Ferry",
+    "accountHistory" : [
+        {
+            "amount" : 333,
+            "date" : "2021-11-15T16:52:26.505+01:00",
+            "purchase" : "Fantastic Wooden Table"
+        },
+        {
+            "amount" : 665.01,
+            "date" : "2021-11-15T16:52:26.505+01:00",
+            "purchase" : "Tasty Soft Towels"
+        },
+        {
+            "amount" : 205.68,
+            "date" : "2021-11-15T16:52:26.505+01:00",
+            "purchase" : "Small Concrete Chair"
+        }
+    ]
+}
+
+### PATCH update nested user
+PATCH {{urlnestedusers}}/updatenesteduser/619e4aa47ef20fb2838ed8c3
+Content-Type: application/json
+
+{
+    "name" : "Stephanie updated"
+}
+
+### DELETE delete nested user
+DELETE {{urlnestedusers}}/deletenesteduser/619e4aa47ef20fb2838ed8c3
